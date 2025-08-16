@@ -1,0 +1,124 @@
+/* Background with djscodeai.in inspired theme */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000000, #001f3f, #00c6ff);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  text-align: center;
+}
+
+h1 {
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background: #222;
+  box-shadow: 0 0 12px cyan;
+}
+
+.feedback-correct {
+  color: #00ffcc;
+  font-weight: bold;
+}
+.feedback-incorrect {
+  color: #ff4f4f;
+  font-weight: bold;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+#next-btn, #restart-btn {
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 10px;
+  color: #000;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  opacity: 0;
+}
+
+#next-btn:hover, #restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.fade-in-btn {
+  animation: fadeInButton 0.5s ease forwards;
+}
+@keyframes fadeInButton {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#timer {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+#score-container {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#leaderboard {
+  margin-top: 20px;
+  text-align: left;
+}
+#leaderboard h3 {
+  margin-bottom: 10px;
+  color: cyan;
+}
+#leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
+#leaderboard li {
+  background: #111;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 5px 0;
+}

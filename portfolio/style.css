@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+
+  /* For modern browsers */
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* Make text transparent so gradient shows */
+  color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00f2fe;
+  text-shadow: 0 0 10px #00f2fe;
+}
+
+/* Sections */
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4facfe;
+}
+
+.highlight {
+  color: #00f2fe;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  border: none;
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+/* Skills */
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.progress {
+  background: #222;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 20px;
+}
+
+.progress-bar.html { width: 90%; background: #ff5722; }
+.progress-bar.css { width: 80%; background: #2196f3; }
+.progress-bar.js { width: 70%; background: #fdd835; }
+
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+.project-card h3 {
+  color: #4facfe;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  margin-top: 2rem;
+}
+
+/* Contact links */
+#contact a {
+  color: #00e5ff;       /* Light blue */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#contact a:hover {
+  color: #4facfe;       /* Slightly darker on hover */
+  text-decoration: underline;
+}
