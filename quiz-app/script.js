@@ -41,12 +41,26 @@ function startQuiz() {
   showQuestion();
 }
 
+let timer; 
+let timeLeft = 30; // start from 30
+
 function startTimer() {
-  timerEl.textContent = "⏳ Time: 0s";
-  clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
-    time++;
-    timerEl.textContent = `⏳ Time: ${time}s`;
+  clearInterval(timer);
+  timeLeft = 30; // reset to 30 each question
+  timerEl.textContent = `⏳ Time Left: ${timeLeft}s`;
+
+  timer = setInterval(() => {
+    timeLeft--;
+    timerEl.textContent = `⏳ Time Left: ${timeLeft}s`;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      feedback.textContent = `⏰ Time’s up! Correct answer: ${questions[currentQuestionIndex].options[questions[currentQuestionIndex].correct]}`;
+      feedback.classList.add("feedback-incorrect");
+      disableOptions();
+      nextBtn.classList.remove("hidden");
+      nextBtn.classList.add("fade-in-btn");
+    }
   }, 1000);
 }
 
